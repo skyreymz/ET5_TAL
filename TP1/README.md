@@ -56,6 +56,21 @@ python q2.py data/wsj_0010_sample.txt data/wsj_0010_sample.txt.grammar
 ```
 
 
+## Question 3.1
+data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.ne.nltk
+REMARQUE IMPORTANTE: pour la commande bash suivante, il faut indiquer VOTRE chemin complet du fichier wsj_0010_sample.txt
+```bash
+python q3_1.py C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\TP1\data\wsj_0010_sample.txt
+```
+
+## Question 3.2 et 3.3
+data/formal-tst.NE.key.04oct95_sample.txt => data/formal-tst.NE.key.04oct95_sample.txt.ne.nltk
+REMARQUE IMPORTANTE: pour la commande bash suivante, il faut indiquer VOTRE chemin complet du fichier formal-tst.NE.key.04oct95_sample.txt
+```bash
+python q3_2et3.py C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\TP1\data\formal-tst.NE.key.04oct95_sample.txt
+```
+
+
 ## Exemples et documentations
 - https://www.guru99.com/pos-tagging-chunking-nltk.html
 - https://www.nltk.org/_modules/nltk/tree.html
