@@ -61,6 +61,9 @@ Résultats :
 - Word F-measure: 0.963302752293578
 - Tag F-measure: 0.963302752293578
 
+Réponse à la question 1.3.c :
+A partir des résultats des deux évaluations effectuées ci-dessus, nous pouvons voir que nous obtenons de meilleurs taux dans le cas où nous prenons des étiquettes universelles, ce qui est cohérent.
+
 
 ## Question 2 : Utilisation de la plateforme NLTK pour l'analyse syntaxique
 Le fichier data/wsj_0010_sample.txt.grammar contient les structures syntaxiques desirees.
@@ -70,14 +73,16 @@ python q2.py data/wsj_0010_sample.txt data/wsj_0010_sample.txt.grammar
 ```
 
 
-## Question 3.1
+## Question 3 : Utilisation de la plateforme NLTK pour l’extraction d’entités nommées
+
+### Question 3.1
 data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.ne.nltk
 REMARQUE IMPORTANTE: pour la commande bash suivante, il faut indiquer VOTRE chemin complet du fichier wsj_0010_sample.txt
 ```bash
 python q3_1.py C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\TP1\data\wsj_0010_sample.txt
 ```
 
-## Question 3.2 et 3.3
+### Question 3.2 et 3.3
 data/formal-tst.NE.key.04oct95_sample.txt => data/formal-tst.NE.key.04oct95_sample.txt.ne.nltk
 REMARQUE IMPORTANTE: pour la commande bash suivante, il faut indiquer VOTRE chemin complet du fichier formal-tst.NE.key.04oct95_sample.txt
 ```bash
