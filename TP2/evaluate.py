@@ -239,7 +239,7 @@ class CPennTaggedSentenceReader(object):
       # 2. analyse this line
       lLine = sLine.strip().split(" ")
       lNewLine = []
-      for nIndex in xrange(len(lLine)):
+      for nIndex in range(len(lLine)):
          tTagged = tuple(lLine[nIndex].split("_"))
          assert(len(tTagged)<3)
          if len(tTagged)==1:
@@ -340,17 +340,17 @@ if __name__ == '__main__':
    #
    opts, args = getopt.getopt(sys.argv[1:], "")
    for opt in opts:
-      print opt
+      print(opt)
    if len(args) != 2:
-      print g_sInformation
+      print(g_sInformation)
       sys.exit(1)
    sCandidate = args[0]
    sReference = args[1]
    if not os.path.exists(sCandidate):
-      print "Candidate file %s does not exist." % sCandidate
+      print("Candidate file %s does not exist." % sCandidate)
       sys.exit(1)
    if not os.path.exists(sCandidate):
-      print "Reference file %s does not exist." % sReference
+      print("Reference file %s does not exist." % sReference)
       sys.exit(1)
    #
    # Compare candidate and reference
@@ -371,7 +371,7 @@ if __name__ == '__main__':
       lReference = fReference.readNonEmptySentence(bIgnoreNoneTag=True); lCandidate = fCandidate.readNonEmptySentence(bIgnoreNoneTag=True)
 
    if ( lReference and not lCandidate ) or ( lCandidate and not lReference ) : 
-      print "Warning: the reference and the candidate consists of different number of lines!"
+      print("Warning: the reference and the candidate consists of different number of lines!")
 
    word_precision = float(nTotalCorrectWords) / float(nCandidateWords)
    word_recall = float(nTotalCorrectWords) / float(nReferenceWords)
@@ -383,11 +383,11 @@ if __name__ == '__main__':
    else:
       tag_fmeasure = (2*tag_precision*tag_recall)/(tag_precision+tag_recall)
 
-   print "Word precision:", word_precision
-   print "Word recall:", word_recall
+   print("Word precision:", word_precision)
+   print("Word recall:", word_recall)
 
-   print "Tag precision:", tag_precision
-   print "Tag recall:", tag_recall
+   print("Tag precision:", tag_precision)
+   print("Tag recall:", tag_recall)
 
-   print "Word F-measure:", word_fmeasure
-   print "Tag F-measure:",  tag_fmeasure
+   print("Word F-measure:", word_fmeasure)
+   print("Tag F-measure:",  tag_fmeasure)
