@@ -19,7 +19,7 @@ if not x:
     raise ValueError("Le parametre d'entree n'est pas un .txt")
 
 print('Nom du fichier texte en entree :', path_in) # wsj_0010_sample.txt
-print('Nom du fichier de sortie :', path_out) # swj_0010_sample.txt.ne.nltk
+print('Nom du fichier de sortie :', path_out) # wsj_0010_sample.txt.ne.nltk
 
 
 train_text = state_union.raw("2005-GWBush.txt")

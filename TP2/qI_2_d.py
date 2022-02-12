@@ -25,9 +25,9 @@ lines_univ = []
 with open(path_univ) as f:
     lines_univ = f.readlines()    
 
-print('Nom de notre fichier en entree :', 		 path_in_exp) # wsj_0010_sample.txt.pos.stanford
-print('Nom du fichier de reference en entree :', path_in_ref) # wsj_0010_sample.pos.stanford.ref
-print('Nom de la table de correspondance :',	 path_univ)   # POSTags_PTB_Universal_Linux.txt
+print('Nom de notre fichier en entree :', 		 path_in_exp) # data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford
+print('Nom du fichier de reference en entree :', path_in_ref) # data/wsj_0010_sample.pos.stanford.ref
+print('Nom de la table de correspondance :',	 path_univ)   # data/POSTags_PTB_Universal.txt
 
 
 # OUVERTURE / CREATION DES FICHIERS DE SORTIE

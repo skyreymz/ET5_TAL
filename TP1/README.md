@@ -15,7 +15,7 @@ nltk.download('punkt')
 ```
 
 
-## Question 1. Evaluation de l’analyse morpho-syntaxique de la plateforme NLTK
+## 1. Evaluation de l’analyse morpho-syntaxique de la plateforme NLTK
 
 ### Question 1.1 : Désambiguïsation morpho-syntaxique
 data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.pos.nltk
@@ -65,7 +65,7 @@ Réponse à la question 1.3.c :
 A partir des résultats des deux évaluations effectuées ci-dessus, nous pouvons voir que nous obtenons de meilleurs taux dans le cas où nous prenons des étiquettes universelles, ce qui est cohérent.
 
 
-## Question 2 : Utilisation de la plateforme NLTK pour l'analyse syntaxique
+## 2 : Utilisation de la plateforme NLTK pour l'analyse syntaxique
 Le fichier data/wsj_0010_sample.txt.grammar contient les structures syntaxiques desirees.
 data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.chk.nltk
 ```bash
@@ -73,7 +73,7 @@ python q2.py data/wsj_0010_sample.txt data/wsj_0010_sample.txt.grammar
 ```
 
 
-## Question 3 : Utilisation de la plateforme NLTK pour l’extraction d’entités nommées
+## 3 : Utilisation de la plateforme NLTK pour l’extraction d’entités nommées
 
 ### Question 3.1
 data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.ne.nltk

@@ -16,8 +16,8 @@ path_out = path_in[:id_type] + '.pos.stanford.ref'
 fr = open(path_in,  'r')
 fw = open(path_out, 'w')
 
-print('Nom du fichier d entree :',  path_in)  # wsj_0010_sample.pos.ref
-print('Nom du fichier de sortie :', path_out) # wwj_0010_sample.pos.standard.ref
+print('Nom du fichier d entree :',  path_in)  # data/wsj_0010_sample.pos.ref
+print('Nom du fichier de sortie :', path_out) # data/wsj_0010_sample.pos.stanford.ref
 
 
 # LECTURE DU FICHIER + TRAITEMENT
