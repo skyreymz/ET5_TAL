@@ -34,6 +34,13 @@ Faire l'évaluation :
 ```bash
 python evaluate.py data/wsj_0010_sample_corrected.txt.pos.nltk data/wsj_0010_sample_corrected.pos.ref
 ```
+Résultats :
+- Word precision: 0.944954128440367
+- Word recall: 0.944954128440367
+- Tag precision: 0.944954128440367
+- Tag recall: 0.944954128440367
+- Word F-measure: 0.944954128440367
+- Tag F-measure: 0.944954128440367
 
 
 ### Question 1.3 : Evaluation à l'aide des étiquettes universelles
@@ -46,6 +53,13 @@ Faire l'évaluation :
 ```bash
 python evaluate.py data/wsj_0010_sample_corrected_universal.txt.pos.nltk data/wsj_0010_sample_corrected_universal.pos.ref
 ```
+Résultats :
+- Word precision: 0.963302752293578
+- Word recall: 0.963302752293578
+- Tag precision: 0.963302752293578
+- Tag recall: 0.963302752293578
+- Word F-measure: 0.963302752293578
+- Tag F-measure: 0.963302752293578
 
 
 ## Question 2 : Utilisation de la plateforme NLTK pour l'analyse syntaxique
