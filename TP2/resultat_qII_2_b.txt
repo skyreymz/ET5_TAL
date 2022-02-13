@@ -1,4 +1,4 @@
-Entité nommée	Type	Nombre d’occurrences	Proportion dans le texte (%)
+Entite nommee	Type	Nombre d’occurrences	Proportion dans le texte (%)
 
 Consuela	PERSON	1	0.008264462809917356 (1/121)
 Washington	PERSON	5	0.04132231404958678 (5/121)

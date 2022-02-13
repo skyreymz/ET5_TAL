@@ -41,11 +41,11 @@ for l in lines:
 				else:
 					entity_dictionary[couple[0]] = (couple[1], 1)
 		else:
-			raise ValueError("L'entité nommée possède un caractère / dans son nom")
+			raise ValueError("L'entite nommee possède un caractère / dans son nom")
 
 
 # ECRITURE DANS LE FICHIER DE SORTIE
-fw.write("Entité nommée\tType\tNombre d’occurrences\tProportion dans le texte (%)\n\n")
+fw.write("Entite nommee\tType\tNombre d’occurrences\tProportion dans le texte (%)\n\n")
 for item in entity_dictionary.items():
 	fw.write(item[0] + '\t' + item[1][0] + '\t' + str(item[1][1]) + '\t' + str(item[1][1]/global_counter) + " (" + str(item[1][1]) + "/" + str(global_counter) + ")\n")
 
