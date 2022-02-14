@@ -57,14 +57,11 @@ for tag_PTB in tags_PTB:
 		raise ValueError("L etiquette " + tag_PTB + " de la table de correspondance LIMA -> PTB n est pas presente dans la table PTB -> Universal")
 	tags_PTB_UNIV.append(tags_UNIV[index])
 
-"""
-for i in range(len(tags_LIMA)):
-	print(tags_LIMA[i] + '\t' + tags_PTB_UNIV[i])
-"""
 
 # CONVERSION DES TAGS LIMA EN UNIV
-for l in lines_lima:
-	element, tag = l.split('\t')
-	fw.write(element + '\t' + tags_PTB_UNIV[tags_LIMA.index(tag)] + '\n')
+for line in lines_lima:
+	line = line.replace('\n', '').split('\t')
+	if (len(line) == 2):
+		fw.write(line[0] + '\t' + tags_PTB_UNIV[tags_LIMA.index(line[1])] + '\n')
 
 fw.close()

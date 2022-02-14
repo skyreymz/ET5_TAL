@@ -1,3 +1,0 @@
-python qI_1.py data/pos_reference.txt.lima
-
-python qI_2.py data/pos_reference.txt.lima data/ POSTags_LIMA_PTB_Linux.txt data/POSTags_PTB_Universal_Linux.txt

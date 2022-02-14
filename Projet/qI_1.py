@@ -20,21 +20,15 @@ print('Nom du fichier de sortie :', path_out) # data/pos_test.txt
 lines = fr.readlines()
 fr.close()
 
-text = ""
-beginning = True # detection des debuts de phrase
 for l in lines:
 	elements = l.split('\t')
 	if (len(elements) == 2):
-		if(beginning):
-			beginning = False
-		else:
-			if(elements[0] not in [",", "."]): # on ne met pas d espace devant les points et les virgules
-				fw.write(" ")
-
+		if(elements[0] not in [",", "."]): # on ne met pas d espace devant les points et les virgules
+			fw.write(" ")
 		fw.write(elements[0])
-
-		if(elements[0] == "."):
-			beginning = True
-			fw.write(" ") # espace pour le debut de la prochaine phrase
+	elif (len(elements) == 1):
+		fw.write("\n") # retour à la ligne pour la prochaine phrase
+	else:
+		raise ValueError('Il y a une erreur dans le fichier ' + path_in)
 
 fw.close()
