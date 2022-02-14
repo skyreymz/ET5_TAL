@@ -1,49 +1,33 @@
 import sys
 import re
 
-assert(len(sys.argv) == 4)
+assert(len(sys.argv) == 3)
 
-path_in_nltk = sys.argv[1]
-path_in_ref  = sys.argv[2]
-path_univ    = sys.argv[3] # Table de correspondance
+path_in   = sys.argv[1]
+path_univ = sys.argv[2] # Table de correspondance
 
-# VERIFICATION DES TYPES DES FICHIERS
-#assert(bool(re.search("nltk$", path1)) ^ bool(re.search("nltk$", path2)))
-#assert(bool(re.search("ref$", path1))  ^ bool(re.search("ref$", path2)))
-
-id_type_nltk = path_in_nltk.find('.txt.pos.nltk')
-id_type_ref = path_in_ref.find('.pos.ref')
-assert(id_type_nltk != -1)
-assert(path_in_ref != -1)
+assert(path_in.find('.pos') != -1)
 
 
 # OUVERTURE ET LECTURE DES FICHIERS D ENTREE
-lines_nltk = []
-with open(path_in_nltk, 'r') as f:
-    lines_nltk = f.readlines()
-
-lines_ref = []
-with open(path_in_ref, 'r') as f:
-    lines_ref = f.readlines()
+lines_in = []
+with open(path_in, 'r') as f:
+    lines_in = f.readlines()
 
 lines_univ = []
 with open(path_univ) as f:
     lines_univ = f.readlines()    
 
-print('Nom de notre fichier en entree :', 		 path_in_nltk) # data/wsj_0010_sample.txt.pos.nltk
-print('Nom du fichier de reference en entree :', path_in_ref)  # data/wsj_0010_sample.pos.ref
-print('Nom de la table de correspondance :',	 path_univ)    # data/POSTags_PTB_Universal_Linux.txt
+print('Nom du fichier en entree :', 		 path_in)   # data/wsj_0010_sample_corrected.txt.pos.nltk / data/wsj_0010_sample_corrected.pos.ref
+print('Nom de la table de correspondance :', path_univ) # data/POSTags_PTB_Universal_Linux.txt
 
 
 # OUVERTURE / CREATION DES FICHIERS DE SORTIE
-path_out_nltk = path_in_nltk[0:id_type_nltk] + '_universal.txt.pos.nltk'
-path_out_ref  = path_in_ref[0:id_type_ref]   + '_universal.pos.ref'
+path_out = path_in + '.univ'
 
-f_nltk = open(path_out_nltk, 'w')
-f_ref  = open(path_out_ref,  'w')
+fw = open(path_out, 'w')
 
-print('Nom de notre fichier en sortie :', 		 path_out_nltk)
-print('Nom du fichier de reference en sortie :', path_out_ref)
+print('Nom du fichier en sortie :', path_out) # data/wsj_0010_sample_corrected.txt.pos.nltk.univ / data/wsj_0010_sample_corrected.pos.ref.univ
 
 
 # ENREGISTREMENT DE LA TABLE DE CORRESPONDANCE DANS UN TABLEAU
@@ -55,11 +39,10 @@ for line in lines_univ:
     tags_ptb.append(line[0])
     tags_univ.append(line[1])
 
-# REMPLACEMENT DES ETIQUETTES DES FICHIERS ET ECRITURE VERS LES FICHIERS DE SORTIE
-def replace_tags(lines, outfile):
-	for l in lines:
-		element, tag = l.split()
-		outfile.write(element + '\t' + tags_univ[tags_ptb.index(tag)] + '\n')
 
-replace_tags(lines_nltk, f_nltk)
-replace_tags(lines_ref, f_ref)
+# REMPLACEMENT DES ETIQUETTES DES FICHIERS ET ECRITURE VERS LES FICHIERS DE SORTIE
+for l in lines_in:
+	element, tag = l.split()
+	fw.write(element + '\t' + tags_univ[tags_ptb.index(tag)] + '\n')
+
+fw.close()

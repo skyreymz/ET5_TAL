@@ -17,7 +17,7 @@ nltk.download('punkt')
 
 ## 1. Evaluation de l’analyse morpho-syntaxique de la plateforme NLTK
 
-### Question 1.1 : Desambiguïsation morpho-syntaxique
+### Question 1.1 : Desambiguisation morpho-syntaxique
 data/wsj_0010_sample.txt => data/wsj_0010_sample.txt.pos.nltk
 ```bash
 python q1_1.py data/wsj_0010_sample.txt
@@ -25,12 +25,14 @@ python q1_1.py data/wsj_0010_sample.txt
 
 
 ### Question 1.2 : Evaluation à l'aide des etiquettes Penn TreeBank (PTB)
+
+#### Correction des fichiers pour pouvoir faire l'évaluation
 data/wsj_0010_sample.txt.pos.nltk et data/wsj_0010_sample.pos.ref => data/wsj_0010_sample_corrected.txt.pos.nltk et data/wsj_0010_sample_corrected.pos.ref
 ```bash
 python q1_2.py data/wsj_0010_sample.txt.pos.nltk data/wsj_0010_sample.pos.ref
 ```
 
-Faire l'evaluation :
+#### Evaluation de l'analyseur morpho-syntaxique de la plateforme NLTK
 ```bash
 python evaluate.py data/wsj_0010_sample_corrected.txt.pos.nltk data/wsj_0010_sample_corrected.pos.ref
 ```
@@ -44,14 +46,23 @@ Resultats :
 
 
 ### Question 1.3 : Evaluation à l'aide des etiquettes universelles
-data/wsj_0010_sample_corrected.txt.pos.nltk et data/wsj_0010_sample_corrected.pos.ref => data/wsj_0010_sample_corrected_universal.txt.pos.nltk et data/wsj_0010_sample_corrected_universal.pos.ref
+
+#### Question 1.3.a : Remplacement des étiquettes Penn TreeBank des fichiers par les étiquettes universelles à l'aide de la table de correspondance
+
+data/wsj_0010_sample_corrected.txt.pos.nltk => data/wsj_0010_sample_corrected.txt.pos.nltk.univ
 ```bash
-python q1_3.py data/wsj_0010_sample_corrected.txt.pos.nltk data/wsj_0010_sample_corrected.pos.ref data/POSTags_PTB_Universal_Linux.txt
+python q1_3.py data/wsj_0010_sample_corrected.txt.pos.nltk data/POSTags_PTB_Universal_Linux.txt
 ```
 
-Faire l'evaluation :
+data/wsj_0010_sample_corrected.pos.ref => data/wsj_0010_sample_corrected.pos.ref.univ
 ```bash
-python evaluate.py data/wsj_0010_sample_corrected_universal.txt.pos.nltk data/wsj_0010_sample_corrected_universal.pos.ref
+python q1_3.py data/wsj_0010_sample_corrected.pos.ref data/POSTags_PTB_Universal_Linux.txt
+```
+
+
+#### Question 1.3.b : Evaluation de l'analyseur morpho-syntaxique de la plateforme NLTK selon les étiquettes universelles
+```bash
+python evaluate.py data/wsj_0010_sample_corrected.txt.pos.nltk.univ data/wsj_0010_sample_corrected.pos.ref.univ
 ```
 Resultats :
 - Word precision: 0.963302752293578
@@ -61,7 +72,8 @@ Resultats :
 - Word F-measure: 0.963302752293578
 - Tag F-measure: 0.963302752293578
 
-Reponse à la question 1.3.c :
+
+#### Question 1.3.c : Conclusions des évaluations précédentes
 A partir des resultats des deux evaluations effectuees ci-dessus, nous pouvons voir que nous obtenons de meilleurs taux dans le cas où nous prenons des etiquettes universelles, ce qui est coherent.
 
 
