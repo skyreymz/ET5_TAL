@@ -5,7 +5,8 @@
 ### I.1 Installation
 
 #### Question I.1.d : Analyser le texte du fichier "sample-input.txt"
-data/stanford/stanford-postagger-2018-10-16/sample-input.txt => data/stanford/stanford-postagger-2018-10-16/resultats/sample-input.txt.pos
+<u>Entrée :</u> data/stanford/stanford-postagger-2018-10-16/sample-input.txt
+<u>Sortie :</u> data/stanford/stanford-postagger-2018-10-16/resultats/sample-input.txt.pos
 ```bash
 cd data/stanford/stanford-postagger-2018-10-16
 ./stanford-postagger.sh models/english-left3words-distsim.tagger sample-input.txt > resultats/sample-input.txt.pos
@@ -16,7 +17,8 @@ Le fichier de resultat _sample-input.txt.pos_ se trouve dans le dossier _data/st
 ### I.2 Evaluation
 
 #### Question I.2.a : Lancer le POS tagger sur le fichier "wsj_0010_sample.txt"
-data/wsj_0010_sample.txt => data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford
+<u>Entrée :</u> data/wsj_0010_sample.txt
+<u>Sortie :</u> data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford
 ```bash
 cd data/stanford/stanford-postagger-2018-10-16
 ./stanfordpostagger.sh models/english-left3words-distsim.tagger ../../wsj_0010_sample.txt > resultats/wsj_0010_sample.txt.pos.stanford
@@ -25,14 +27,15 @@ Le fichier de resultat _wsj_0010_sample.txt.pos.stanford_ se trouve dans le doss
 
 
 #### Question I.2.b : Ecrire un programme Python qui permet de convertir le fichier de reference _wsj_0010_sample.pos.ref_ au format de la sortie du Stanford POS tagger
-data/wsj_0010_sample.pos.ref => data/wsj_0010_sample.pos.stanford.ref
+<u>Entrée :</u> data/wsj_0010_sample.pos.ref
+<u>Sortie :</u> data/wsj_0010_sample.pos.stanford.ref
 ```bash
 python qI_2_b data/wsj_0010_sample.pos.ref
 ```
 
 
 #### Question I.2.c : Calculer la precision de ce POS tagger en utilisant les etiquettes PTB
-Faire l'evaluation :
+<u>Entrées :</u> data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford et data/wsj_0010_sample.pos.stanford.ref
 ```bash
 python evaluate.py data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford data/wsj_0010_sample.pos.stanford.ref
 ```
@@ -46,13 +49,15 @@ Resultats :
 
 
 #### Question I.2.d : Remplacer à l’aide d’un programme Python les etiquettes Penn TreeBank des fichiers par les etiquettes universelles en utilisant la table de correspondance « POSTags_PTB_Universal.txt »
-data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford et data/wsj_0010_sample.pos.stanford.ref POSTags_PTB_Universal.txt => data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.univ.stanford data/wsj_0010_sample.pos.univ.stanford.ref
+<u>Entrées :</u> data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford et data/wsj_0010_sample.pos.stanford.ref POSTags_PTB_Universal.txt
+<u>Sorties :</u> data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.univ.stanford et data/wsj_0010_sample.pos.univ.stanford.ref
 ```bash
 python qI_2_d.py data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.stanford data/wsj_0010_sample.pos.stanford.ref data/POSTags_PTB_Universal.txt
 ```
 
 
 #### Question I.2.e : Calculer la precision de ce POS tagger en utilisant les etiquettes universelles
+<u>Entrées :</u> data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.univ.stanford et data/wsj_0010_sample.pos.univ.stanford.ref
 ```bash
 python evaluate.py data/stanford/stanford-postagger-2018-10-16/resultats/wsj_0010_sample.txt.pos.univ.stanford data/wsj_0010_sample.pos.univ.stanford.ref
 ```
@@ -80,7 +85,8 @@ Pour chacun de ces deux mots, le POS tagger determine une etiquette trop eloigne
 ### II.1 Installation
 
 #### Question II.1.j : Analyser le texte du fichier "sample-input.txt"
-data/stanford/stanford-postagger-2018-10-16/sample-input.txt => data/stanford/stanford-ner-2018-10-16/resultats/sample-input.txt.output
+<u>Entrée :</u> data/stanford/stanford-postagger-2018-10-16/sample-input.txt
+<u>Sortie :</u> data/stanford/stanford-ner-2018-10-16/resultats/sample-input.txt.output
 ```bash
 cd data/stanford/stanford-ner-2018-10-16
 
@@ -95,7 +101,8 @@ Le fichier de resultat _sample-input.txt.output_ se trouve dans le dossier _data
 ### II.2 Extraction d’entites nommees
 
 #### Question II.2.a : Lancer l’extracteur d’entites nommees sur le fichier "formal-tst.NE.key.04oct95_small.txt"
-data/formal-tst.NE.key.04oct95_small.txt => data/stanford/stanford-ner-2018-10-16/resultats/formal-tst.NE.key.04oct95_small.txt.ne.stanford
+<u>Entrée :</u> data/formal-tst.NE.key.04oct95_small.txt
+<u>Sortie :</u> data/stanford/stanford-ner-2018-10-16/resultats/formal-tst.NE.key.04oct95_small.txt.ne.stanford
 ```bash
 cd data/stanford/stanford-ner-2018-10-16
 
@@ -108,7 +115,8 @@ Le fichier de resultat _formal-tst.NE.key.04oct95_small.txt.ne.stanford_ se trou
 
 
 #### Question II.2.b : A partir du resultat de l’outil de reconnaissance des entites nommees "formal-tst.NE.key.04oct95_small.txt.ne.stanford", ecrire un programme Python permettant de representer les entites nommees sous le format suivant : Entite nommee, Type, Nombre d’occurrences, Proportion dans le texte (%)
-data/formal-tst.NE.key.04oct95_small.txt.ne.stanford => data/resultat_qII_2_b.txt
+<u>Entrée :</u> data/formal-tst.NE.key.04oct95_small.txt.ne.stanford
+<u>Sortie :</u> data/resultat_qII_2_b.txt
 ```bash
 python qII_2_b.py data/stanford/stanford-ner-2018-10-16/resultats/formal-tst.NE.key.04oct95_small.txt.ne.stanford resultat_qII_2_b.txt
 ```
