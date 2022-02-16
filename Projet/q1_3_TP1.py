@@ -41,8 +41,16 @@ for line in lines_univ:
 
 
 # REMPLACEMENT DES ETIQUETTES DES FICHIERS ET ECRITURE VERS LES FICHIERS DE SORTIE
+lines_error = []
 for l in lines_in:
-	element, tag = l.split()
-	fw.write(element + '\t' + tags_univ[tags_ptb.index(tag)] + '\n')
-
+    try:
+        element, tag = l.split()
+        fw.write(element + '\t' + tags_univ[tags_ptb.index(tag)] + '\n')
+    except :
+        lines_error.append(l.replace('\n', ''))
 fw.close()
+
+if (len(lines_error) > 0):
+    print("\nLes lignes suivantes n ont pas pu etre traitees :")
+    for l in lines_error:
+        print(l)

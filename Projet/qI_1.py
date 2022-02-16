@@ -20,14 +20,19 @@ print('Nom du fichier de sortie :', path_out) # data/pos_test.txt
 lines = fr.readlines()
 fr.close()
 
+beginning = True
 for l in lines:
 	elements = l.split('\t')
 	if (len(elements) == 2):
 		if(elements[0] not in [",", "."]): # on ne met pas d espace devant les points et les virgules
-			fw.write(" ")
+			if not beginning:
+				fw.write(" ")
+			else:
+				beginning = False
 		fw.write(elements[0])
 	elif (len(elements) == 1):
 		fw.write("\n") # retour à la ligne pour la prochaine phrase
+		beginning = True
 	else:
 		raise ValueError('Il y a une erreur dans le fichier ' + path_in)
 
