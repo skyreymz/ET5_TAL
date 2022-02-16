@@ -62,13 +62,17 @@ python q1_3_TP1.py data/pos_test.txt.pos.nltk data/POSTags_PTB_Universal_Linux.t
 ```
 
 
-### Question I.5 : 
+### Question I.5 : Calculer la précision de ce POS tagger en utilisant les étiquettes universelles
 
-<!-- -->
-Pour evaluate :
-si on a par exemple
-I've	I
-on supprime le mot à droite, on conserve dans une variable "I've" et on retire le "I"
-<!-- -->
+<u>Entrées :</u> data/pos_test.txt.pos.stanford.univ et data/pos_reference.txt.univ
+```bash
+python evaluate.py data/pos_test.txt.pos.stanford.univ data/pos_reference.txt.univ
+```
+
+<u>Entrées :</u> data/pos_test.txt.pos.nltk.univ et data/pos_reference.txt.univ
+```bash
+python evaluate.py data/pos_test.txt.pos.nltk.univ data/pos_reference.txt.univ
+```
+
 
 ## II. Evaluation de la reconnaissance d’entités nommées 
