@@ -75,4 +75,8 @@ python evaluate.py data/pos_test.txt.pos.nltk.univ data/pos_reference.txt.univ
 ```
 
 
-## II. Evaluation de la reconnaissance d’entités nommées 
+## II. Evaluation de la reconnaissance d’entités nommées
+
+
+Pour la question 4, les résultats ne veulent pas forcément dire que l'un est "meilleur" que l'autre en terme de performance puisque le fichier de référence comporte de nombreuses "erreurs" d'étiquettes notables par l'oeil humain.
+Donc voir quelle méthode se rapproche le plus d'un fichier de référence "obsolète" n'est pas forcément bon signe, au contraire ! TODO

@@ -33,7 +33,7 @@ tokenized = custom_sent_tokenizer.tokenize(sample_text)
 
 
 def traitement(namedEnt):
-    for line in namedEnt: 
+    for line in namedEnt:
         if type(line)==Tree: # only a nltk.tree.Tree is relevant
             line_words = ""
             for i in range(0,len(line)):
@@ -46,7 +46,7 @@ def conversion(label):
     org = ["ORGANIZATION", "FACILITY"]
     pers = ["PERSON"]
     loc = ["LOCATION", "GPE", "GSP"]
-    misc = ["DATE", "TIME", "MONEY", "PERCENT"]
+    misc = ["DATE", "TIME", "MONEY", "PERCENT"] # Remarque : NLTK et STANFORD ne trouveront jamais des MISC...
 
     if label in org:
         return "ORG"
