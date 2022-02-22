@@ -41,6 +41,8 @@ def traitement(namedEnt):
                 if i!=(len(line)-1):
                     line_words += " "
             f.write(line_words + "\t" + conversion(line.label()) + "\n")
+        else:
+            f.write(line[0] + "\t" + "O" + "\n")
 
 def conversion(label):
     org = ["ORGANIZATION", "FACILITY"]
