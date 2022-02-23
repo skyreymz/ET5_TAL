@@ -28,9 +28,9 @@ print('Nom du fichier de reference en entree :', path_in_ref)
 nb_lines_ref  = len(lines_ref)
 nb_lines_pred = len(lines_pred)
 
-TP = 0 # le mot etiquette correctement par les experts
-FP = 0 # le mot n a pas ete etiquette correctement
-FN = 0 # le mot n a ete etiquette par aucune etiquette
+TP = 0 # le mot a ete etiquete correctement par les experts
+FP = 0 # le mot n a pas ete etiquete correctement
+FN = 0 # le mot n a ete etiquete par aucune etiquette
 
 def preprocessing(line):
 	word,  tag  = line.split('\t')
@@ -124,11 +124,11 @@ sys.stdout.write('\nPrecision = ')
 sys.stdout.write(str(TP / (TP + FP)))
 sys.stdout.write(' ( ')
 sys.stdout.write(str(TP))
-sys.stdout.write(' / ( ')
+sys.stdout.write(' / (')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FP))
-sys.stdout.write(' ))')
+sys.stdout.write(') )')
 
 print('')
 
@@ -136,11 +136,11 @@ sys.stdout.write('\nRappel = ')
 sys.stdout.write(str(TP / (TP + FN)))
 sys.stdout.write(' ( ')
 sys.stdout.write(str(TP))
-sys.stdout.write(' / ( ')
+sys.stdout.write(' / (')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FN))
-sys.stdout.write(' ))')
+sys.stdout.write(') )')
 
 print('')
 
@@ -148,8 +148,8 @@ sys.stdout.write('\nF-mesure = ')
 sys.stdout.write(str(TP / (TP + FN)))
 sys.stdout.write(' ( ')
 sys.stdout.write(str(TP))
-sys.stdout.write(' / ( ')
+sys.stdout.write(' / (')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FN))
-sys.stdout.write(' ))\n')
+sys.stdout.write(') )\n')

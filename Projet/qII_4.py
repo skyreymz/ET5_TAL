@@ -7,11 +7,6 @@ path_in_pred = sys.argv[1]
 path_in_ref  = sys.argv[2]
 
 
-# VERIFICATION DES TYPES DES FICHIERS
-assert(bool(re.search(".conll.txt$", path_in_pred)))
-assert(bool(re.search(".conll.txt$", path_in_ref)))
-
-
 # OUVERTURE ET LECTURE DES FICHIERS D ENTREE
 lines_pred = []
 with open(path_in_pred, 'r') as f:
