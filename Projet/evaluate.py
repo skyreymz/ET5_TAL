@@ -147,7 +147,7 @@ print('')
 
 sys.stdout.write('F-mesure = ')
 sys.stdout.write(str(fmesure))
-sys.stdout.write(' 2 * ')
+sys.stdout.write(' = 2 * ')
 sys.stdout.write(str(precision))
 sys.stdout.write(' * ')
 sys.stdout.write(str(rappel))

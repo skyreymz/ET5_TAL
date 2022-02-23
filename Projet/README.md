@@ -51,7 +51,7 @@ python q1_1_TP1.py data/pos_test.txt
 
 
 ### Question I.4 : Convertir les résultats des deux POS taggers en utilisant les étiquettes universelles (Annexe 1)
-Pour cette question, on réutilise le script du TP1 : q1_3_TP1.py
+Pour cette question, on réutilise le script du TP1 : q1_3_TP1.py (le script a ete legerement modifie afin de prendre en compte les accolades et les apostrophes pour Stanford)
 
 <u>Entrées :</u> data/pos_test.txt.pos.stanford et data/POSTags_PTB_Universal_Linux.txt
 <u>Sortie :</u> data/pos_test.txt.pos.stanford.univ
