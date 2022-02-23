@@ -100,10 +100,6 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 			assert(long_word.find(short_word) != -1)
 			long_word = long_word.replace(short_word, '', 1)
 		except:
-			#if(word_ref in ['{', '}', '(', ')']): # Ces caracteres ne sont pas conserves dans le fichier stanford
-			#	FN += 1
-			#	i_pred -=1
-			#elif ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
 			if ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
 				i_ref -= 1
 			else: # Dans les autres cas, Stanford oublie de considerer un mot
@@ -112,7 +108,7 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 			word_type = 0
 			error_counter += 1
 	
-			print('Erreur au niveau de la ligne n°', i_ref, ' du fichier de reference et n°', i_pred, ' du fichier de predicition\n')
+			print('Erreur au niveau de la ligne n°', i_ref, ' du fichier de reference et n°', i_pred, ' du fichier de predicition')
 	#print('Mots mis à jour : ref = ', word_ref, " ; pred = ", word_pred)
 	#print('Mots mis à jour : long = ', long_word, " ; short = ", short_word)
 
@@ -120,9 +116,10 @@ print(error_counter, " erreur(s) referencee(s)")
 
 
 # RESULTATS
-sys.stdout.write('\nPrecision = ')
+print("\nMetriques d evaluation :")
+sys.stdout.write('Precision = ')
 sys.stdout.write(str(TP / (TP + FP)))
-sys.stdout.write(' ( ')
+sys.stdout.write(' = ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' / (')
 sys.stdout.write(str(TP))
@@ -132,9 +129,9 @@ sys.stdout.write(') )')
 
 print('')
 
-sys.stdout.write('\nRappel = ')
+sys.stdout.write('Rappel = ')
 sys.stdout.write(str(TP / (TP + FN)))
-sys.stdout.write(' ( ')
+sys.stdout.write(' = ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' / (')
 sys.stdout.write(str(TP))
@@ -144,9 +141,9 @@ sys.stdout.write(') )')
 
 print('')
 
-sys.stdout.write('\nF-mesure = ')
+sys.stdout.write('F-mesure = ')
 sys.stdout.write(str(TP / (TP + FN)))
-sys.stdout.write(' ( ')
+sys.stdout.write(' = ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' / (')
 sys.stdout.write(str(TP))

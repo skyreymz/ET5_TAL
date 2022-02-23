@@ -5227,7 +5227,9 @@ and	CONJ
 inventiveness	NOUN
 of	ADP
 an	DET
+{	.
 offending	VERB
+}	.
 country	NOUN
 's	PRT
 own	ADJ
@@ -5856,6 +5858,7 @@ the	DET
 debt	NOUN
 forgiven	VERB
 .	.
+(	.
 During	ADP
 its	PRON
 centennial	NOUN
@@ -5881,6 +5884,7 @@ American	ADJ
 business	NOUN
 history	NOUN
 .	.
+)	.
 THREE	NUM
 COMPUTERS	NOUN
 that	DET
@@ -6929,9 +6933,11 @@ of	ADP
 16.125	NUM
 Canadian	ADJ
 dollars	NOUN
+(	.
 US	NOUN
 $	X
 13.73	NUM
+)	.
 .	.
 On	ADP
 the	DET
@@ -10161,6 +10167,7 @@ Wild	NOUN
 Sheep	NOUN
 Chase	NOUN
 ''	.
+(	.
 Kodansha	NOUN
 ,	.
 320	NUM
@@ -10168,6 +10175,7 @@ pages	NOUN
 ,	.
 $	X
 18.95	NUM
+)	.
 ,	.
 baby	NOUN
 boomers	NOUN
@@ -10498,6 +10506,7 @@ novel	NOUN
 Norwegian	ADJ
 Wood	NOUN
 ''	.
+(	.
 every	DET
 Japanese	NOUN
 under	ADP
@@ -10509,6 +10518,7 @@ fluent	ADJ
 in	ADP
 Beatles	NOUN
 lyrics	NOUN
+)	.
 ,	.
 has	VERB
 sold	VERB
@@ -10577,6 +10587,7 @@ ta	PRT
 Have	VERB
 Wa	.
 ''	.
+(	.
 Macmillan	NOUN
 ,	.
 339	NUM
@@ -10584,6 +10595,7 @@ pages	NOUN
 ,	.
 $	X
 17.95	NUM
+)	.
 ,	.
 the	DET
 Beatles	NOUN
@@ -10846,6 +10858,7 @@ home	NOUN
 Funny	NOUN
 Business	NOUN
 ''	.
+(	.
 Soho	NOUN
 ,	.
 228	NUM
@@ -10853,6 +10866,7 @@ pages	NOUN
 ,	.
 $	X
 17.95	NUM
+)	.
 by	ADP
 Gary	NOUN
 Katzenstein	NOUN
