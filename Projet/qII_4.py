@@ -99,10 +99,10 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 			assert(long_word.find(short_word) != -1)
 			long_word = long_word.replace(short_word, '', 1)
 		except:
-			if(word_ref in ['{', '}', '(', ')']): # Ces caracteres ne sont pas conserves dans le fichier stanford
-				FN += 1
-				i_pred -=1
-			elif ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
+			#if(word_ref in ['{', '}', '(', ')']): # Ces caracteres ne sont pas conserves dans le fichier stanford
+			#	FN += 1
+			#	i_pred -=1
+			if ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
 				i_ref -= 1
 			else: # Dans les autres cas, Stanford oublie de considerer un mot
 				FN += 1
