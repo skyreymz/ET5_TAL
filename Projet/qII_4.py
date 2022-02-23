@@ -21,8 +21,8 @@ lines_ref = []
 with open(path_in_ref, 'r') as f:
     lines_ref = f.readlines()
 
-print('Nom de notre fichier en entree :', 		 path_in_pred) # data/ne_test.txt.ne.nltk.conll.txt , data/ne_test.txt.ne.stanford.conll.txt
-print('Nom du fichier de reference en entree :', path_in_ref)  # data/ne_reference.txt.conll.txt
+print('Nom de notre fichier en entree :', 		 path_in_pred) # data\ne_test.txt.ne.nltk.conll.txt , data\ne_test.txt.ne.stanford.conll.txt
+print('Nom du fichier de reference en entree :', path_in_ref)  # data\ne_reference.txt.conll.txt
 
 
 # EVALUATION
@@ -109,8 +109,17 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 				i_pred -=1
 			word_type = 0
 			error_counter += 1
-	
+
+			# print('Erreur au niveau de la ligne n°', i_ref, ' du fichier de reference et n°', i_pred, ' du fichier de predicition\n')
+
+
+			# TESTS
 			print('Erreur au niveau de la ligne n°', i_ref, ' du fichier de reference et n°', i_pred, ' du fichier de predicition\n')
+			
+			print('Mots mis à jour : ref = ', word_ref, " ; pred = ", word_pred)
+			print('Mots mis à jour : long = ', long_word, " ; short = ", short_word)
+
+
 	#print('Mots mis à jour : ref = ', word_ref, " ; pred = ", word_pred)
 	#print('Mots mis à jour : long = ', long_word, " ; short = ", short_word)
 

@@ -429,9 +429,9 @@ insisted	O
 that	O
 the	O
 United Auto Workers	ORG
--LRB-	O
+(	O
 UAW	ORG
--RRB-	O
+)	O
 union	O
 agree	O
 to	O
@@ -858,7 +858,7 @@ use	O
 of	O
 the	O
 TARP Troubled Assets Relief Program	ORG
--RSB-	O
+]	O
 programme	O
 -	O
 to	O
@@ -1037,9 +1037,9 @@ February	O
 ,	O
 2009	O
 General Motors	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 and	O
 Chrysler	ORG
 have	O
@@ -1124,9 +1124,9 @@ deal	O
 to	O
 most	O
 United Auto Workers	ORG
--LRB-	O
+(	O
 UAW	ORG
--RRB-	O
+)	O
 union	O
 members	O
 -	O
@@ -1660,9 +1660,9 @@ Another	O
 automaker	O
 ,	O
 General Motors	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 ,	O
 announced	O
 that	O
@@ -1920,9 +1920,9 @@ April	O
 2009	O
 General	O
 Motors	O
--LRB-	O
+(	O
 GM	O
--RRB-	O
+)	O
 and	O
 Chrysler	ORG
 will	O
@@ -2552,7 +2552,7 @@ stronger	O
 .	O
 It	O
 will	O
--RSB-	O
+]	O
 quickly	O
 clear	O
 away	O
@@ -2872,9 +2872,9 @@ April	O
 ,	O
 2009	O
 General Motors Corporation	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 announced	O
 on	O
 Wednesday	O
@@ -3987,7 +3987,7 @@ term	O
 the	O
 dealer	O
 network	O
--RSB-	O
+]	O
 is	O
 key	O
 and	O
@@ -4028,9 +4028,9 @@ American	O
 automobile	O
 manufacturer	O
 General Motors	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 announced	O
 plans	O
 Friday	O
@@ -4530,26 +4530,26 @@ the	O
 bankruptcies	O
 of	O
 Lehman Brothers	ORG
--LRB-	O
+(	O
 $	O
 691.06	O
 billion	O
--RRB-	O
+)	O
 ,	O
 Washington Mutual	ORG
--LRB-	O
+(	O
 $	O
 327.91	O
 billion	O
--RRB-	O
+)	O
 ,	O
 and	O
 WorldCom	ORG
--LRB-	O
+(	O
 $	O
 103.91	O
 billion	O
--RRB-	O
+)	O
 .	O
 Barack Obama	PER
 presents	O
@@ -4655,7 +4655,7 @@ not	O
 to	O
 ``	O
 perpetuate	O
--RSB-	O
+]	O
 the	O
 bad	O
 business	O
@@ -4705,7 +4705,7 @@ of	O
 Canada	LOC
 and	O
 Ontario	LOC
--LRB-	O
+(	O
 which	O
 he	O
 thanked	O
@@ -4730,7 +4730,7 @@ corporate	O
 stake	O
 in	O
 GM Europe	ORG
--RRB-	O
+)	O
 ,	O
 to	O
 become	O
@@ -5074,7 +5074,7 @@ time	O
 when	O
 the	O
 maxim	O
--LRB-	O
+(	O
 a	O
 widely-repeated	O
 mis-quotation	O
@@ -5095,7 +5095,7 @@ of	O
 Secretary	O
 of	O
 Defense	ORG
--RRB-	O
+)	O
 would	O
 once	O
 more	O
@@ -5886,9 +5886,9 @@ June	O
 ,	O
 2009	O
 General Motors Corporation	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 ,	O
 an	O
 American	O
@@ -5906,9 +5906,9 @@ Friday	O
 that	O
 the	O
 Penske Automotive Group	ORG
--LRB-	O
+(	O
 PAG	ORG
--RRB-	O
+)	O
 was	O
 selected	O
 to	O
@@ -6431,7 +6431,7 @@ favoured	O
 ``	O
 GM	ORG
 's	O
--RSB-	O
+]	O
 behaviour	O
 towards	O
 Germany	LOC
@@ -7277,7 +7277,7 @@ companies	O
 as	O
 ``	O
 n	O
--RSB-	O
+]	O
 either	O
 one	O
 has	O
@@ -7944,9 +7944,9 @@ General Motors	ORG
 logo	O
 .	O
 General Motors Corporation	ORG
--LRB-	O
+(	O
 GM	ORG
--RRB-	O
+)	O
 has	O
 posted	O
 its	O
@@ -8162,11 +8162,11 @@ GMs	O
 largest	O
 individual	O
 investor	O
--LRB-	O
+(	O
 at	O
 9.9	O
 %	O
--RRB-	O
+)	O
 ,	O
 has	O
 called	O
@@ -8228,11 +8228,11 @@ a	O
 AU$	O
 52.5	O
 million	O
--LRB-	O
+(	O
 US$	O
 40.4	O
 million	O
--RRB-	O
+)	O
 ``	O
 financial	O
 assistance	O
@@ -8361,13 +8361,13 @@ the	O
 completely	O
 new	O
 Holden Commodore	PER
--LRB-	O
+(	O
 the	O
 Falcon	O
 's	O
 major	O
 competitor	O
--RRB-	O
+)	O
 which	O
 will	O
 be	O
@@ -8641,10 +8641,10 @@ cuts	O
 of	O
 21	O
 %	O
--LRB-	O
+(	O
 168	O
 units	O
--RRB-	O
+)	O
 in	O
 its	O
 US	LOC
@@ -8864,10 +8864,10 @@ stock	O
 fell	O
 17	O
 cents	O
--LRB-	O
+(	O
 2.1	O
 %	O
--RRB-	O
+)	O
 to	O
 $	O
 8	O
@@ -9271,9 +9271,9 @@ that	O
 the	O
 companies	O
 Daimler-Benz	ORG
--LRB-	O
+(	O
 Mercedes-Benz	ORG
--RRB-	O
+)	O
 and	O
 Chrysler	ORG
 ,	O
@@ -9530,11 +9530,11 @@ pay	O
 $	O
 57	O
 million	O
--LRB-	O
+(	O
 US$	O
 78	O
 million	O
--RRB-	O
+)	O
 for	O
 a	O
 72.4	O
@@ -9583,9 +9583,9 @@ head	O
 of	O
 the	O
 State Property Agency	ORG
--LRB-	O
+(	O
 AVAS	O
--RRB-	O
+)	O
 ,	O
 after	O
 opening	O

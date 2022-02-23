@@ -36,8 +36,20 @@ def conversion(label):
 	else:
 		raise ValueError("Etiquette non reconnue")
 
+def replace(token):
+	if (token == "-LRB-"):
+		return "("
+	elif (token == "-RRB-"):
+		return ")"
+	elif (token == "-RSB-"):
+		return "]"
+	else:
+		raise ValueError("Stanford ne devrait pas retenir les acolades { et }")
+
 
 # TRAITEMENT et ECRITURE DANS LE FICHIER DE SORTIE
+unrelated_characters = ["-LCB-", "-RCB-", "-LRB-", "-RRB-", "-RSB-"] # il s'agit des caracteres {, }, (, ) et ]
+
 for l in lines:
 	entities = l.split()
 	tag = ""
@@ -46,6 +58,8 @@ for l in lines:
 	for entity in entities:
 		couple = entity.split("/")
 		if (len(couple) == 2):
+			if (couple[0] in unrelated_characters):
+				couple[0] = replace(couple[0])
 			if (couple[1] != "O"):
 				if not b_entity:
 					fw.write(couple[0])
@@ -65,6 +79,6 @@ for l in lines:
 				b_entity = False
 				fw.write(couple[0] + "\t" + couple[1] + "\n") # couple[1] == "O" ici
 		else:
-			raise ValueError("L'entite nommee possède un caractère / dans son nom")
+			raise ValueError("L'entite nommee possede un caractère / dans son nom")
 
 fw.close()
