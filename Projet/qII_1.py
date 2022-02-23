@@ -15,8 +15,8 @@ assert(id_type != -1)
 fr = open(path_in,  'r')
 fw = open(path_out, 'w')
 
-print('Nom du fichier d entree :',  path_in)  # data/ne_reference.txt.conll.txt
-print('Nom du fichier de sortie :', path_out) # data/ne_test.txt
+print('Nom du fichier d entree :',  path_in)  # data\ne_reference.txt.conll.txt
+print('Nom du fichier de sortie :', path_out) # data\ne_test.txt
 
 
 # LECTURE DU FICHIER

@@ -11,15 +11,18 @@ nltk.download('words')
 
 # VERIFICATION DES TYPES DES FICHIERS
 assert(len(sys.argv) == 2)
-path_in = sys.argv[1] # ATTENTION, il faut le nom complet du path comme par exemple :
+path_in = sys.argv[1]
+# ATTENTION, il faut le nom complet du path comme par exemple :
 # C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\Projet\data\ne_test.txt
+# Ce chemin sera donc different pour vous.
+
 path_out = path_in + '.ne.nltk'
 x = re.search("\.txt$", path_in)
 if not x:
     raise ValueError("Le parametre d'entree n'est pas un .txt")
 
-print('Nom du fichier texte en entree :', path_in) # data\ne_test.txt
-print('Nom du fichier de sortie :', path_out) # data\ne_test.txt.ne.nltk
+print('Nom du fichier texte en entree :', path_in) # C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\Projet\data\ne_test.txt
+print('Nom du fichier de sortie :', path_out) # C:\Users\user\Desktop\TAL\RepoGit\ET5_TAL\Projet\data\ne_test.txt.ne.nltk
 
 
 train_text = state_union.raw("2005-GWBush.txt")
