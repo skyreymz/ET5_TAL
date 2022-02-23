@@ -45,6 +45,14 @@ lines_error = []
 for l in lines_in:
     try:
         element, tag = l.split()
+        if (element == "-LRB-"):
+            element, tag = "(", "("
+        elif (element == "-RRB-"):
+            element, tag = ")", ")"
+        elif (element == "-LCB-"):
+            element, tag = "{", "(" # Stanford considere que '{' correspond a '('
+        elif (element == "-RCB-"):
+            element, tag = "}", ")" # Stanford considere que '}' correspond a ')'
         fw.write(element + '\t' + tags_univ[tags_ptb.index(tag)] + '\n')
     except :
         lines_error.append(l.replace('\n', ''))

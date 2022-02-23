@@ -99,10 +99,11 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 			assert(long_word.find(short_word) != -1)
 			long_word = long_word.replace(short_word, '', 1)
 		except:
-			if(word_ref in ['{', '}', '(', ')']): # Ces caracteres ne sont pas conserves dans le fichier stanford
-				FN += 1
-				i_pred -=1
-			elif ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
+			#if(word_ref in ['{', '}', '(', ')']): # Ces caracteres ne sont pas conserves dans le fichier stanford
+			#	FN += 1
+			#	i_pred -=1
+			#elif ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
+			if ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
 				i_ref -= 1
 			else: # Dans les autres cas, Stanford oublie de considerer un mot
 				FN += 1
@@ -118,24 +119,41 @@ print(error_counter, " erreur(s) referencee(s)")
 
 
 # RESULTATS
+precision = TP / (TP + FP)
+rappel = TP / (TP + FN)
+fmesure = 2 * precision * rappel / (precision + rappel)
 sys.stdout.write('\nPrecision = ')
-sys.stdout.write(str(TP / (TP + FP)))
+sys.stdout.write(str(precision))
 sys.stdout.write(' ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' / ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FP))
-sys.stdout.write(' )')
+sys.stdout.write(' ))')
 
 print('')
 
 sys.stdout.write('\nRappel = ')
-sys.stdout.write(str(TP / (TP + FN)))
+sys.stdout.write(str(rappel))
 sys.stdout.write(' ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' / ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FN))
+sys.stdout.write(' ))\n')
+
+print('')
+
+sys.stdout.write('\nF-mesure = ')
+sys.stdout.write(str(fmesure))
+sys.stdout.write(' 2 * ')
+sys.stdout.write(str(precision))
+sys.stdout.write(' * ')
+sys.stdout.write(str(rappel))
+sys.stdout.write(' / ( ')
+sys.stdout.write(str(precision))
+sys.stdout.write(' + ')
+sys.stdout.write(str(rappel))
 sys.stdout.write(' )\n')
