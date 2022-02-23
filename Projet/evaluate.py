@@ -7,11 +7,6 @@ path_in_pred = sys.argv[1]
 path_in_ref  = sys.argv[2]
 
 
-# VERIFICATION DES TYPES DES FICHIERS
-assert(bool(re.search(".txt.pos.*.univ$", path_in_pred)))
-assert(bool(re.search(".txt.univ$", 	  path_in_ref)))
-
-
 # OUVERTURE ET LECTURE DES FICHIERS D ENTREE
 lines_pred = []
 with open(path_in_pred, 'r') as f:
@@ -21,15 +16,19 @@ lines_ref = []
 with open(path_in_ref, 'r') as f:
     lines_ref = f.readlines()
 
-print('Nom de notre fichier en entree :', 		 path_in_pred) # data/pos_test.txt.pos.stanford.univ data/pos_test.txt.pos.nltk.univ
-print('Nom du fichier de reference en entree :', path_in_ref)  # data/pos_reference.txt.univ
+print('Nom de notre fichier en entree :', 		 path_in_pred)
+# Pour l analyse morpho-syntaxique : data/pos_test.txt.pos.stanford.univ data/pos_test.txt.pos.nltk.univ
+# Pour la reconnaissance d entites nommees : data/ne_test.txt.ne.nltk.conll.txt data/ne_test.txt.ne.stanford.conll.txt
+print('Nom du fichier de reference en entree :', path_in_ref)
+# Pour l analyse morpho-syntaxique : data/pos_reference.txt.univ
+# Pour la reconnaissance d entites nommees : data/ne_reference.txt.conll.txt
 
 
 # EVALUATION
 nb_lines_ref  = len(lines_ref)
 nb_lines_pred = len(lines_pred)
 
-TP = nb_lines_ref # le mot etiquette correctement par les experts (correspondant au nombre de mots en reference)
+TP = 0 # le mot etiquette correctement par les experts
 FP = 0 # le mot n a pas ete etiquette correctement
 FN = 0 # le mot n a ete etiquette par aucune etiquette
 
@@ -90,7 +89,9 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 	#print('Mots analysés : long = ', long_word, " ; short = ", short_word)
 
 	if (long_word == short_word):
-		if (long_word_tag != short_word_tag):
+		if (long_word_tag == short_word_tag):
+			TP += 1
+		else:
 			FP += 1
 		word_type = 0
 	else: # long_word != short_word
@@ -106,8 +107,8 @@ while(i_ref < nb_lines_ref and i_pred < nb_lines_pred):
 			if ((long_word == '.') or (short_word == '.')): # Stanford rajoute parfois un "." a la fin d une phrase
 				i_ref -= 1
 			else: # Dans les autres cas, Stanford oublie de considerer un mot
-				FN += 1
 				i_pred -=1
+			FN += 1
 			word_type = 0
 			error_counter += 1
 	
@@ -139,7 +140,7 @@ sys.stdout.write(' / ( ')
 sys.stdout.write(str(TP))
 sys.stdout.write(' + ')
 sys.stdout.write(str(FN))
-sys.stdout.write(' ))\n')
+sys.stdout.write(' ))')
 
 print('')
 
